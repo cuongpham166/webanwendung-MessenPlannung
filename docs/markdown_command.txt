@@ -1,0 +1,1 @@
+pandoc -f markdown -t html5 -s -c iasp1.css --toc praktikum.md -o praktikum.html

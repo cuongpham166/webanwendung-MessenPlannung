@@ -1,0 +1,142 @@
+.container_buchen{
+		display:grid;
+		grid-template-columns: 80px 130px 130px 130px 80px;
+		grid-template-rows:90px 90px 90px 90px 90px;
+		grid-template-areas: 
+			"A   B  F  C  E "
+			"H   B AB AC  I "
+			"H  BA BB BC  I "
+			"CA  CA CB Q  Q "
+			"N   N  O  Q  Q ";
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+		justify-content: space-around;
+		color:white;
+		text-align: center;
+		background-color: black;
+		width:680px;
+		margin-left: 300px;
+		border:1px white solid;
+		}
+		
+
+		.ausstellung{
+			background-color: red;
+		}
+			
+		.gang{
+			background-color: green;
+		}
+
+		#restaurant{
+			background-color: blue;
+		}
+		#cafe{
+			background-color: blue;
+		}
+
+		#buro{
+			background-color: orange;
+		}
+
+		.notfall{
+			background-color: purple;
+		}
+
+		#info{
+			background-color: pink;
+		}
+
+		#wc{
+			background-color: seagreen;
+		}
+
+		.name{
+			background-color: black;
+		}
+
+
+	#cafe{
+		grid-area: N;
+	}
+	.fas.fa-coffee.fa-lg{
+		padding-top: 20px;
+	}
+
+	#gang1{
+		grid-area: H;
+	}
+
+	.fas.fa-angle-double-right.fa-lg{
+		padding-top: 60px;
+	}
+
+	#gang2{
+		grid-area: I;
+	}
+
+	.fas.fa-angle-double-right.fa-lg{
+		padding-top: 60px;
+	}
+
+	#buro{
+		grid-area: Q;
+	}
+
+	.fas.fa-briefcase.fa-3x{
+		padding-top: 40px;
+	}
+
+	#notfall1{
+		grid-area: A;
+	}
+
+	.fas.fa-medkit.fa-lg{
+		padding-top: 20px;
+	}
+
+	#notfall2{
+		grid-area: E;
+	}
+
+	#notfall3{
+		grid-area: O;
+	}
+
+	#info{
+		grid-area: B;
+	}
+
+	.fas.fa-info-circle.fa-2x{
+		padding-top: 50px;
+	}
+
+	#wc{
+		grid-area: C;
+	}
+
+	.fas.fa-restroom.fa-lg{
+		padding-top: 20px;
+	}
+
+	#buchenForm{
+		float:right;
+		margin-top: -350px;
+		margin-right: 350px; 
+	}
+
+	#Pinnwand_table{
+		margin-top: -450px;
+	}
+
+	#Pinnwand_buchen{
+		margin-left: 350px;
+	}
+
+	#Panel1{
+		margin-bottom: 30px;
+		margin-left: 50px;
+		margin-right:50px;
+		padding-bottom: 127px;
+		margin-top: 50px;
+	}

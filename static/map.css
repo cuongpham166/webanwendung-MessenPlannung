@@ -1,0 +1,129 @@
+.container{
+			display:grid;
+			grid-template-columns: 80px 130px 130px 130px 80px;
+			grid-template-rows:90px 90px 90px 90px 90px;
+			grid-template-areas: 
+				"A   B  F  C  E "
+				"H   B AB AC  I "
+				"H  BA BB BC  I "
+				"CA  CA CB Q  Q "
+				"N   N  O  Q  Q ";
+			grid-column-gap: 30px;
+			grid-row-gap: 30px;
+			justify-content: space-around;
+			color:white;
+			text-align: center;
+			background-color: black;
+			width:680px;
+			margin-top: 200px;
+			margin-left: 30px;
+			
+		}
+		#Map{
+			margin-left: 25%;
+			margin-right:25%;
+			width: 25%;
+		}
+
+		.ausstellung{
+			background-color: red;
+		}
+			
+		.gang{
+			background-color: green;
+		}
+
+		#restaurant{
+			background-color: blue;
+		}
+		#cafe{
+			background-color: blue;
+		}
+
+		#buro{
+			background-color: orange;
+		}
+
+		.notfall{
+			background-color: purple;
+		}
+
+		#info{
+			background-color: pink;
+		}
+
+		#wc{
+			background-color: seagreen;
+		}
+
+		.name{
+			background-color: black;
+		}
+
+.ausstellung1{
+			background-color: red;
+		}
+
+	#cafe{
+		grid-area: N;
+	}
+	.fas.fa-coffee.fa-lg{
+		padding-top: 20px;
+	}
+
+	#gang1{
+		grid-area: H;
+	}
+
+	.fas.fa-angle-double-right.fa-lg{
+		padding-top: 60px;
+	}
+
+	#gang2{
+		grid-area: I;
+	}
+
+	.fas.fa-angle-double-right.fa-lg{
+		padding-top: 60px;
+	}
+
+	#buro{
+		grid-area: Q;
+	}
+
+	.fas.fa-briefcase.fa-3x{
+		padding-top: 40px;
+	}
+
+	#notfall1{
+		grid-area: A;
+	}
+
+	.fas.fa-medkit.fa-lg{
+		padding-top: 20px;
+	}
+
+	#notfall2{
+		grid-area: E;
+	}
+
+	#notfall3{
+		grid-area: O;
+	}
+
+	#info{
+		grid-area: B;
+	}
+
+	.fas.fa-info-circle.fa-2x{
+		padding-top: 50px;
+	}
+
+	#wc{
+		grid-area: C;
+	}
+
+	.fas.fa-restroom.fa-lg{
+		padding-top: 20px;
+	}
+

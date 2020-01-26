@@ -1,0 +1,40 @@
+<!-- Template -->
+<!-- Contentbereich -->
+<div class="Titel1">
+   <h1>Einteilung List</h1>
+</div>
+<div class="Main">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for.."> 
+<table id="myTable">
+   <tr>
+      <th>ID</th>
+      <th>Halle-ID</th>
+      <th>Ausstellung-ID</th>
+      <th>Position</th>
+      <th>Status</th>
+
+   </tr>
+   @var entry_a;@
+   @var loop_i;@
+   @for loop_i = 0; loop_i < context.length; loop_i++@
+      @entry_a = context[loop_i];@
+      <tr id="#entry_a['id']#">
+         <td>#entry_a['id']#</td>
+         <td>#entry_a['HalleID']#</td>
+         <td>#entry_a['AusstellungID']#</td>
+         <td>#entry_a['Position']#</td>
+         <td>#entry_a['Status']#</td>
+      </tr>
+   @endfor@
+</table>
+</div>
+<div class="idButtonArea">
+	<button id="idAnlegen_einteilung" class="btn">Anlegen</button>
+	<button id="idShowListEntry_einteilung" class="btn ">Anzeigen</button>
+	<button id="idDelete_einteilung" class="btn">Löschen</button>
+   <button id="backDashboard" class="btn">Zurück</button>
+</div>
+
+
+
+

@@ -1,0 +1,52 @@
+<head>
+	<title></title>
+	<style>
+		.grid-container {
+  	display: grid;
+  	grid-gap: 10px;
+    width: 50%;
+    margin: 0 auto 0 auto;
+    position: relative;
+
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item2 {
+  grid-column: 7/ span 1;
+  background-color: red;
+}
+
+.item3 {
+  grid-column: 6/ span 1;
+  background-color: red;
+}
+.item4 {
+  grid-column: 7/ span 1;
+  background-color: red;
+}
+	</style>
+</head>
+<body>
+	<h2>Übersicht Plan</h2>
+
+<div class="map">
+  <div class="Eingang">
+    <i class="fas fa-sign-in-alt"></i>
+  </div>
+  <div class="Info">
+    <i class="fas fa-info"></i>
+  </div>
+  <div class="grid-container">
+    <div class="item1" style="grid-column: 1/ span 1;background-color: red"> Fläche 1</div>
+    <div class="item2"> Fläche 2</div>
+    <div class="item3"> Fläche 3</div>
+    <div class="item4"> Fläche 4</div>
+  </div>
+</div>
+
+</body>

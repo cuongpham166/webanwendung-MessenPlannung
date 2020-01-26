@@ -1,0 +1,9 @@
+[{"id": "0", "Halle": ["1", "2"], "Ausstellung": ["1"], "Position": "AA", "Status": "frei"}, 
+	{"id": "1", "HalleID": "1", "AusstellungID": "1", "Position": "AB", "Status": "gespert"}, 
+	{"id": "2", "HalleID": "1", "AusstellungID": "2", "Position": "BA", "Status": "gespert"}, 
+	{"id": "3", "HalleID": "1", "AusstellungID": "3", "Position": "BB", "Status": "gespert"}, 
+	{"id": "4", "HalleID": "1", "AusstellungID": "4", "Position": "CB", "Status": "gespert"},
+	{"id": "5", "HalleID": "2", "AusstellungID": "5", "Position": "CB", "Status": "gespert"},
+	{"id": "6", "HalleID": "2", "AusstellungID": "6", "Position": "BA", "Status": "gespert"},
+	{"id": "7", "HalleID": "2", "AusstellungID": "7", "Position": "BC", "Status": "gespert"},
+	{"id": "8", "HalleID": "2", "AusstellungID": "8", "Position": "AB", "Status": "gespert"}]

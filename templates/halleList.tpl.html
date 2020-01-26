@@ -1,0 +1,36 @@
+<!-- Template -->
+<!-- Contentbereich -->
+<div class="Titel1">
+   <h1>Halle List</h1>
+</div>
+<div class="Main">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for.."> 
+<table id="myTable">
+   <span>
+      <tr>
+      <th>ID</th>
+      <th>Name</th>
+   </tr>
+   @var entry_a;@
+   @var loop_i;@
+   @for loop_i = 0; loop_i < context.length; loop_i++@
+      @entry_a = context[loop_i];@
+      <tr id="#entry_a['id']#">
+         <td>#entry_a['id']#</td>
+         <td>#entry_a['Name']#</td>
+   @endfor@
+   </span> 
+</table>
+</div>
+
+<div id="infoList">
+   
+</div>
+
+<div class="idButtonArea">
+   <button id="idAnlegen_halle" class="btn">Anlegen</button>
+   <button id="idShowListEntry_halle" class="btn">Anzeigen</button>
+   <button id="idDelete_halle" class="btn">Löschen</button>
+   <button id="backDashboard" class="btn">Zurück</button>
+</div>
+<!-- EOF -->

@@ -1,0 +1,29 @@
+<div class="Titel1">
+    <h1>Ausstellungsfläche List</h1>
+</div><!-- Template -->
+<!-- Contentbereich -->
+<div class="Main">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for.."> 
+<table id="myTable">
+   <tr>
+      <th>ID</th>
+      <th>Name</th>
+   </tr>
+   @var entry_a;@
+   @var loop_i;@
+   @for loop_i = 0; loop_i < context.length; loop_i++@
+      @entry_a = context[loop_i];@
+      <tr id="#entry_a['id']#">
+         <td>#entry_a['id']#</td>
+         <td>#entry_a['Name']#</td>
+      </tr>
+   @endfor@
+</table>
+</div>
+<div class="idButtonArea">
+   <button id="idAnlegen_ausstellung" class="btn">Anlegen</button>
+   <button id="idShowListEntry_ausstellung" class="btn">Anzeigen</button>
+   <button id="idDelete_ausstellung" class="btn">Löschen</button>
+   <button id="backDashboard" class="btn">Zurück</button>
+</div>
+<!-- EOF -->

@@ -1,0 +1,24 @@
+[  
+	{  
+      "id":"0",
+      "HalleID":"0",
+      "Ausstellung":[{"id":"0","AusstellerID":"0","Position":"ZZ"}]
+                     
+   },
+   {  
+      "id":"1",
+      "HalleID":"1",
+      "Ausstellung":[{"id":"1","AusstellerID":"1","Position":"AB"}, 
+                     {"id":"2","AusstellerID":"1","Position":"BA"}, 
+                     {"id":"3","AusstellerID":"2","Position":"BB"}, 
+                     {"id":"4","AusstellerID":"3","Position":"CB"}]     
+   },
+    {  
+      "id":"2",
+      "HalleID":"2",
+      "Ausstellung":[{"id":"5","AusstellerID":"4","Position":"CB"}, 
+                     {"id":"6","AusstellerID":"6","Position":"BA"}, 
+                     {"id":"7","AusstellerID":"5","Position":"BC"}, 
+                     {"id":"8","AusstellerID":"6","Position":"AB"}]     
+   }   
+]

@@ -1,0 +1,127 @@
+<div class="Titel1">
+  <h1>Besucher</h1>
+</div>
+
+var entry_a;@
+@var loop_i;@
+@for loop_i = 0; loop_i < context.length; loop_i++@
+  @entry_a = context[loop_i];@
+<div id="Map">
+    <div class="container">
+    @var i;@
+    
+    @for i = 0; i < 4; i++@
+    <div class="ausstellung" style="grid-area: #entry_a['Austellung'][i]['Position']#">#entry_a['Austellung'][i]['Position']#
+      <button id="moreInfo" onclick="clickFunction(event)">More Info</button>
+    </div>
+    @endfor@
+    
+
+    <div class="ausstellung" style="grid-area: BA">Fläche 2</div>
+    <div class="ausstellung" style="grid-area: BB">Fläche 3</div>
+    <div class="ausstellung" style="grid-area: BC">Fläche 4</div>
+    <div class="ausstellung" style="grid-area: CB">Fläche 5</div>-->
+
+    <div id="cafe">
+      <i class="fas fa-coffee fa-lg"></i>
+    </div>
+
+    <div class="gang" id="gang1">
+      <i class="fas fa-angle-double-right fa-lg"></i>
+    </div>
+
+    <div class="gang" id="gang2">
+      <i class="fas fa-angle-double-right fa-lg"></i>
+    </div>
+
+    <div id="buro">
+      <i class="fas fa-briefcase fa-3x"></i>
+    </div>
+
+    <div class="notfall" id="notfall1">
+      <i class="fas fa-medkit fa-lg"></i>
+    </div>
+
+    <div class="notfall" id="notfall2">
+      <i class="fas fa-medkit fa-lg"></i>
+    </div>
+
+    <div class="notfall"  id="notfall3">
+      <i class="fas fa-medkit fa-lg"></i>
+    </div>
+
+    <div id="info">
+      <i class="fas fa-info-circle fa-2x"></i>
+    </div>
+
+    <div id="wc">
+      <i class="fas fa-restroom fa-lg"></i>
+    </div>
+
+    <div class="name" style="grid-area: CA">#entry_a['HalleID']#</div>
+    <div class="name" style="grid-area: AC">#entry_a['HalleID']#</div>
+
+  </div>
+    
+</div>
+@endfor@ 
+</div>
+<div id="infoList">
+   
+</div>
+
+<div class="idButtonArea" class="clButtonArea Schalter_form" >
+    <button id ="idSearch">Search</button>
+    <button id="abmelden">Abmelden</button>
+</div>
+
+  
+    const value1 = obj.map(match => `
+      <table>
+        <tr>
+                <th>Halle-ID</th>
+                <th>Ausstellung-ID</th>
+                <th>Position</th>
+                <th>Status</th>
+            </tr>
+        <tr>
+          <td>${match.HalleID}</td>
+              <td>${match.AusstellungID}</td>
+          <td>${match.Position}</td>
+          <td>${match.Status}</td>
+        </tr> 
+      </table>
+           
+      `).join('');
+      console.log(value1);
+      map.innerHTML = value1;
+
+
+
+      <div class="ausstellung1" style="grid-area:AB">Fläche 1</div>
+        <div class="ausstellung1" style="grid-area: BA">Fläche 2</div>
+        <div class="ausstellung1" style="grid-area: BB">Fläche 3</div>
+        <div class="ausstellung1" style="grid-area: BC">Fläche 4</div>
+        <div class="ausstellung1" style="grid-area: CB">Fläche 5</div>
+
+
+        <table>
+        <tr>
+          <td>${match.id}</td>
+          <td>${match.AusstellerID}</td>
+              <td>${match.Position}</td>
+        </tr> 
+      </table>
+
+
+      const html = obj[0]["Ausstellung"].map(match => 
+      `
+      <div class="ausstellung1" style="grid-area:">${match.id}</div>     
+      `).join('');
+
+      map.innerHTML = html;
+  });
+
+
+  <select id="selectHalle">
+   onchange="selectHalle(this.value)"

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>praktikum</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.line-block{white-space: pre-line;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="iasp1.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#die-dokumentation"><strong><em>Die Dokumentation</em></strong></a></li>
+<li><a href="#einteilung"><strong>Einteilung</strong></a><ul>
+<li><a href="#allgemeine-beschreibung-der-aufgabestellung">Allgemeine Beschreibung der Aufgabestellung</a></li>
+<li><a href="#allgemeine-informationen">Allgemeine Informationen</a></li>
+</ul></li>
+<li><a href="#nutzungsszenario-messerveranstalter"><strong>Nutzungsszenario “Messerveranstalter”</strong></a><ul>
+<li><a href="#allgemeine-beschreibung">Allgemeine Beschreibung</a></li>
+<li><a href="#benutzgruppe-messerveranstalter-beschreibung-persona">Benutzgruppe “Messerveranstalter”: Beschreibung Persona</a></li>
+<li><a href="#interaktionsdesign">Interaktionsdesign</a></li>
+<li><a href="#test">Test</a></li>
+</ul></li>
+<li><a href="#nutzungszenario-aussteller"><strong>Nutzungszenario “Aussteller”</strong></a><ul>
+<li><a href="#allgemeine-beschreibung-1">Allgemeine Beschreibung</a></li>
+<li><a href="#benutzgruppe-aussteller-beschreibung-persona">Benutzgruppe “Aussteller”: Beschreibung Persona</a></li>
+<li><a href="#interaktionsdesign-1">Interaktionsdesign</a></li>
+<li><a href="#test-1">Test</a></li>
+</ul></li>
+<li><a href="#nutzungszenario-besucher"><strong>Nutzungszenario “Besucher”</strong></a><ul>
+<li><a href="#allgemeine-beschreibung-2">Allgemeine Beschreibung</a></li>
+<li><a href="#benutzgruppe-besucher-beschreibung-persona">Benutzgruppe “Besucher”: Beschreibung Persona</a></li>
+<li><a href="#interaktionsdesign-2">Interaktionsdesign</a></li>
+<li><a href="#test-2">Test</a></li>
+</ul></li>
+</ul>
+</nav>
+<h2 id="die-dokumentation"><strong><em>Die Dokumentation</em></strong></h2>
+<hr />
+<h2 id="einteilung"><strong>Einteilung</strong></h2>
+<h3 id="allgemeine-beschreibung-der-aufgabestellung">Allgemeine Beschreibung der Aufgabestellung</h3>
+<ul>
+<li>In diesem Prakitkum muss man eine Webapplikation, in der man für die Veranstaltung plannen und organiesieren. Durch diese Applikation kann der Mitarbeiter durch ein Raster die Veranstalltungsfläche in jeder Halle einteilen. Und dann kann der Aussteller die Ausstellungsfläche buchen oder stonieren, wenn die Fläche schon vorher gebucht wurde. Die Besucher kann zuerst die Halle auswählen, und dann kann er wissen, wer eine Ausstellungsfläche gebucht hat. Außerdem kann er weitere Informationen zu dem Aussteller erhalten oder die Information zu Halle, Ausstellungsfläche usw suchen.</li>
+</ul>
+<h3 id="allgemeine-informationen">Allgemeine Informationen</h3>
+<ul>
+<li>Das ist eine Single-Page Applikation (SPA)</li>
+<li>Frontend:
+<ul>
+<li>Javascript, fetchAPI zum asynchronen Datenverkehr zwichen Client und Server</li>
+<li>HTML</li>
+<li>CSS (besonders CSS-Grid für Layout und für Halle-Layout)</li>
+</ul></li>
+<li>Backend:
+<ul>
+<li>Python<br />
+</li>
+<li>Cherrypy framework zur Implementierung des Webservers mit REST-Interface</li>
+</ul></li>
+<li>Hilfsmittel:
+<ul>
+<li>cherrypy zur Implementierung des Webservers mit REST-Interface</li>
+<li>te/tm zur clientseitigen Verwendung von templates</li>
+<li>es zur clientseitigen Verwendung des Publish-Subscreiber-Musters</li>
+<li>fetch-API zum ansychronen Datenverkehr zwischen Client und Server</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="nutzungsszenario-messerveranstalter"><strong>Nutzungsszenario “Messerveranstalter”</strong></h2>
+<h3 id="allgemeine-beschreibung">Allgemeine Beschreibung</h3>
+<ul>
+<li>Als Messerveranstalter kann man hauptsächlich die Veranstaltung plannen und organiesieren. Nach der Anmeldung kommt man zur ein Dashboard, im dem man arbeiten kann</li>
+<li>Zuerst kann man Halle und Ausstellungsfläche anlegen/löschen/ändern. Und dann kann man durch ein Form und ein Raster die Ausstellungsfläche in jeder Halle einteilen.</li>
+<li>Besonders kann der Messerveranstalter den Stand der Buchung prüfen.</li>
+</ul>
+<h3 id="benutzgruppe-messerveranstalter-beschreibung-persona">Benutzgruppe “Messerveranstalter”: Beschreibung Persona</h3>
+<ul>
+<li>Halle anlegen/löschen/ändern</li>
+<li>Ausstellungsfläche anlegen/löschen/ändern</li>
+<li>Ausstellungsfläche einteilen</li>
+</ul>
+<h3 id="interaktionsdesign">Interaktionsdesign</h3>
+<h4 id="übersicht-interaktion">Übersicht Interaktion</h4>
+<figure>
+<img src="layout.png" alt="Layout" /><figcaption>Layout</figcaption>
+</figure>
+<figure>
+<img src="homepage.png" alt="Startseite" /><figcaption>Startseite</figcaption>
+</figure>
+<figure>
+<img src="anmeldung.png" alt="Anmeldung Form" /><figcaption>Anmeldung Form</figcaption>
+</figure>
+<figure>
+<img src="mitarbeiter.png" alt="Mitarbeiter Seite" /><figcaption>Mitarbeiter Seite</figcaption>
+</figure>
+<figure>
+<img src="weitere_information_suchen.png" alt="Weitere Informationen suchen" /><figcaption>Weitere Informationen suchen</figcaption>
+</figure>
+<figure>
+<img src="form.png" alt="Form" /><figcaption>Form</figcaption>
+</figure>
+<figure>
+<img src="list.png" alt="List" /><figcaption>List</figcaption>
+</figure>
+<h4 id="interaktion-1">Interaktion 1</h4>
+<h5 id="zustandsdiagramme-und-wireframes-nach-bedarf">Zustandsdiagramm(e) und Wireframe(s) nach Bedarf</h5>
+<figure>
+<img src="IAS_Praktikum.png" alt="UML" /><figcaption>UML</figcaption>
+</figure>
+<figure>
+<img src="mitarbeiter_uml.png" alt="UML_mitarbeiter" /><figcaption>UML_mitarbeiter</figcaption>
+</figure>
+<h5 id="erläuterung">Erläuterung</h5>
+<ul>
+<li>Nach der Anmeldung kann der Mitarbeiter jetzt arbeiten. Er kann Halle oder Ausstellungsfläche anlegen oder ändern. Vor der Einteilung gibt es Übersichtplan, damit man einfacher einteilen. Und dann durch ein Klick auf “Einteilung” Schalter kann er mithilfe eines Forms die Ausstellungsfläche in jeder Halle mit einer bestimmter Position einteilen. Es gibt ingesamt 5 Potisionen. Jede Ausstellungsfläche kann nur in eine bestimmte Halle verteilt werden. Außerdem kann man auf die “Stand der Buchung” klicken, dadurch kann man den Stand aller Buchungen prüfen und sehen.</li>
+</ul>
+<h5 id="erläuterung-daten-nach-bedarf">Erläuterung Daten nach Bedarf</h5>
+<ul>
+<li>Daten der Halle (id, Name)</li>
+<li>Daten der Ausstellungsfläche (id, Name)</li>
+<li>Daten der Halleeinteilung (id, Halle_id, Ausstellungsfläche_id, Position, Status)</li>
+<li>Daten für Stand der Buchung (id, Ausstellungsfläche_id, Aussteller_id, Status)</li>
+</ul>
+<h3 id="test">Test</h3>
+<h4 id="curl-test">curl-Test</h4>
+<figure>
+<img src="curl_aussteller.png" alt="curl_Test_aussteller" /><figcaption>curl_Test_aussteller</figcaption>
+</figure>
+<figure>
+<img src="curl_einteilen.png" alt="curl_Test_einteilen" /><figcaption>curl_Test_einteilen</figcaption>
+</figure>
+<figure>
+<img src="curl_flache.png" alt="curl_Test_flache" /><figcaption>curl_Test_flache</figcaption>
+</figure>
+<figure>
+<img src="curl_flache1.png" alt="curl_Test_flache1" /><figcaption>curl_Test_flache1</figcaption>
+</figure>
+<hr />
+<h2 id="nutzungszenario-aussteller"><strong>Nutzungszenario “Aussteller”</strong></h2>
+<h3 id="allgemeine-beschreibung-1">Allgemeine Beschreibung</h3>
+<ul>
+<li>Nach der Anmeldung kann der Aussteller durch einem Form die Ausstellungsfläche buchen. Durch das Raster kann der Aussteller wissen, an welcher Position die Ausstellungsfläche liegt. Außerdem gibt es die Liste aller gebuchte Ausstellungsfläche.</li>
+<li>Der Aussteller kann auch duch einem Form die Buchung stornieren.</li>
+</ul>
+<h3 id="benutzgruppe-aussteller-beschreibung-persona">Benutzgruppe “Aussteller”: Beschreibung Persona</h3>
+<ul>
+<li>Ausstellungsfläche buchen</li>
+<li>die gebuchte Buchung stornieren</li>
+<li>weitere Informationen suchen</li>
+</ul>
+<h3 id="interaktionsdesign-1">Interaktionsdesign</h3>
+<h4 id="übersicht-interaktion-1">Übersicht Interaktion</h4>
+<figure>
+<img src="layout.png" alt="Layout" /><figcaption>Layout</figcaption>
+</figure>
+<figure>
+<img src="homepage.png" alt="Startseite" /><figcaption>Startseite</figcaption>
+</figure>
+<figure>
+<img src="anmeldung.png" alt="Anmeldung Form" /><figcaption>Anmeldung Form</figcaption>
+</figure>
+<figure>
+<img src="aussteller.png" alt="Aussteller Seite" /><figcaption>Aussteller Seite</figcaption>
+</figure>
+<figure>
+<img src="buchung_form.png" alt="Buchung Form" /><figcaption>Buchung Form</figcaption>
+</figure>
+<figure>
+<img src="weitere_information_suchen.png" alt="Weitere Informationen suchen" /><figcaption>Weitere Informationen suchen</figcaption>
+</figure>
+<figure>
+<img src="form.png" alt="Form" /><figcaption>Form</figcaption>
+</figure>
+<figure>
+<img src="list.png" alt="List" /><figcaption>List</figcaption>
+</figure>
+<h4 id="interaktion-1-1">Interaktion 1</h4>
+<h5 id="zustandsdiagramme-und-wireframes-nach-bedarf-1">Zustandsdiagramm(e) und Wireframe(s) nach Bedarf</h5>
+<figure>
+<img src="IAS_Praktikum.png" alt="UML" /><figcaption>UML</figcaption>
+</figure>
+<figure>
+<img src="aussteller_uml.png" alt="UML_aussteller" /><figcaption>UML_aussteller</figcaption>
+</figure>
+<h5 id="erläuterung-1">Erläuterung</h5>
+<ul>
+<li>Nach der Anmeldung kann der Aussteller jetzt die Aussellungsfläche buchen. Vor der Buchung kann man den Stand der Buchung prüfen, indem man auf dem “Einteilen” Schalter klickt. Man kann auch die gebuchten Ausstellungsflächen stornieren.</li>
+</ul>
+<h5 id="erläuterung-daten-nach-bedarf-1">Erläuterung Daten nach Bedarf</h5>
+<ul>
+<li>Daten des Ausstellers (id, Name, Firma, Email, Ort)</li>
+<li>Daten der Buchung (id, Aussteller_id, Ausstellungsfläche_id, Status)</li>
+</ul>
+<h3 id="test-1">Test</h3>
+<h4 id="curl-test-1">curl-Test</h4>
+<figure>
+<img src="curl_buchung.png" alt="curl_Test_buchung" /><figcaption>curl_Test_buchung</figcaption>
+</figure>
+<hr />
+<h2 id="nutzungszenario-besucher"><strong>Nutzungszenario “Besucher”</strong></h2>
+<h3 id="allgemeine-beschreibung-2">Allgemeine Beschreibung</h3>
+<ul>
+<li>Nach der Anmeldung kann der Besucher die Informationen suchen. Zum beispiel um die Information zu Ausstellungsfläche zu suchen kann er einfach die Halle auswählen und dann wählt man durch den Button die Ausstellungsfläche aus, um zu wissen, welchem Aussteller die Ausstellungsfläche gehört.</li>
+<li>Außerdem kann der Besucher weitere Informationen zu Hallen, Ausstellungsflächen, Ausstellern,. usw suchen</li>
+</ul>
+<h3 id="benutzgruppe-besucher-beschreibung-persona">Benutzgruppe “Besucher”: Beschreibung Persona</h3>
+<ul>
+<li>den Übersichtplan für jede Halle abrufen und weitere Informationen zu Ausstellern abrufen</li>
+<li>weitere Informationen zu Hallen, Ausstellungsflächen, Aussteller, usw abrufen</li>
+</ul>
+<h3 id="interaktionsdesign-2">Interaktionsdesign</h3>
+<h4 id="übersicht-interaktion-2">Übersicht Interaktion</h4>
+<figure>
+<img src="layout.png" alt="Layout" /><figcaption>Layout</figcaption>
+</figure>
+<figure>
+<img src="homepage.png" alt="Startseite" /><figcaption>Startseite</figcaption>
+</figure>
+<figure>
+<img src="anmeldung.png" alt="Anmeldung Form" /><figcaption>Anmeldung Form</figcaption>
+</figure>
+<figure>
+<img src="besucher.png" alt="Bescher Seite" /><figcaption>Bescher Seite</figcaption>
+</figure>
+<figure>
+<img src="besucher_halle1.png" alt="Halle 1 suchen" /><figcaption>Halle 1 suchen</figcaption>
+</figure>
+<figure>
+<img src="besucher_halle2.png" alt="Halle 2 suchen" /><figcaption>Halle 2 suchen</figcaption>
+</figure>
+<figure>
+<img src="weitere_information_suchen.png" alt="Weitere Informationen suchen" /><figcaption>Weitere Informationen suchen</figcaption>
+</figure>
+<figure>
+<img src="form.png" alt="Form" /><figcaption>Form</figcaption>
+</figure>
+<figure>
+<img src="list.png" alt="List" /><figcaption>List</figcaption>
+</figure>
+<h4 id="interaktion-1-2">Interaktion 1</h4>
+<h5 id="zustandsdiagramme-und-wireframes-nach-bedarf-2">Zustandsdiagramm(e) und Wireframe(s) nach Bedarf</h5>
+<figure>
+<img src="IAS_Praktikum.png" alt="UML" /><figcaption>UML</figcaption>
+</figure>
+<figure>
+<img src="besucher_uml.png" alt="UML_besucher" /><figcaption>UML_besucher</figcaption>
+</figure>
+<h5 id="erläuterung-2">Erläuterung</h5>
+<ul>
+<li>Nach der Anmeldung kann der Busucher jetz die Informationen zu Halle und Ausstellern. Für die Suche muss man zuerst die Halle auswählen. Und dann entstehen alle Ausstellungsflächen der ausgewählte Halle mit roter Farbe. In jeder Ausstellungsfläche kann man auch Informationen zu dem Aussteller, der die Ausstellungsfläche gebucht hat. Um das zu machen klickt man auf dem “More Info” Schalter. Alle Informationen von dem Aussteller werdem in der Tablle neben dem Übersichtplan entstehen. Wenn man die andere Halle auswählen möchte, muss man zuerst auf dem “Aktualisieren” Schalter klicken und dann kann man andere Halle auswählen.</li>
+<li>Außerdem kann man schnell die Informationen suchen, wenn man “Search auswählen”. Zuerst muss man dem Typ der Informationen auswählen (zum Beispiel Halle, Ausstellungsfläche, usw), dann kann man die Informationen suchen</li>
+</ul>
+<h5 id="erläuterung-daten-nach-bedarf-2">Erläuterung Daten nach Bedarf</h5>
+<ul>
+<li>Daten des Ausstellers (id, Name, Firma, Email, Ort)</li>
+</ul>
+<h3 id="test-2">Test</h3>
+<h4 id="curl-test-2">curl-Test</h4>
+<figure>
+<img src="curl_plan.png" alt="curl_Test_plan" /><figcaption>curl_Test_plan</figcaption>
+</figure>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<div class="Titel1">
+	<h1>Besucher</h1>
+</div>
+
+<div id="selecthallE">
+	
+	<select id="selectHalle" onchange="selectHalle()">
+		<option value = "" selected disabled>Halle suchen......</option>
+		<option value = "1">Halle 1</option>
+		<option value = "2">Halle 2</option>
+	</select>
+	<div id="button_map">
+		<button id="showMap1" onclick="showMap()">Anzeige</button>
+		<button id="refresh">Neu laden</button>
+	</div>
+</div>
+
+<div id="mapInfo">
+	<div id="Map">
+		<div class="container">	
+	    		
+			    <div id="cafe">
+			      <i class="fas fa-coffee fa-lg"></i>
+			    </div>
+
+			    <div class="gang" id="gang1">
+			      <i class="fas fa-angle-double-right fa-lg"></i>
+			    </div>
+
+			    <div class="gang" id="gang2">
+			      <i class="fas fa-angle-double-right fa-lg"></i>
+			    </div>
+
+			    <div id="buro">
+			      <i class="fas fa-briefcase fa-3x"></i>
+			    </div>
+
+			    <div class="notfall" id="notfall1">
+			      <i class="fas fa-medkit fa-lg"></i>
+			    </div>
+
+			    <div class="notfall" id="notfall2">
+			      <i class="fas fa-medkit fa-lg"></i>
+			    </div>
+
+			    <div class="notfall"  id="notfall3">
+			      <i class="fas fa-medkit fa-lg"></i>
+			    </div>
+
+			    <div id="info">
+			      <i class="fas fa-info-circle fa-2x"></i>
+			    </div>
+
+			    <div id="wc">
+			      <i class="fas fa-restroom fa-lg"></i>
+			    </div>
+
+	 	</div>
+	</div>
+
+
+	<div id="infoList">
+	   <table id="ausstellerInfo">
+	   		<tr>
+	   			<th>ID</th>
+	      		<th>Name</th>
+	      		<th>Firma</th>
+	      		<th>Email</th>
+	      		<th>Ort</th>
+	   		</tr>
+	   		<tr>
+	   			<td id="id_Austeller"></td>
+	   			<td id="name_Aussteller"></td>
+	   			<td id="firma_Aussteller"></td>
+	   			<td id="email_Aussteller"></td>
+	   			<td id="ort_Aussteller"></td>
+	   		</tr>
+	   </table>
+	</div>
+</div>
+
+
+<div class="idButtonArea" class="clButtonArea Schalter_form" >
+    <button id ="idSearch">Search</button>
+    <button id="abmelden">Abmelden</button>
+</div>
+
+	
+		

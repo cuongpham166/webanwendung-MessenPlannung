@@ -1,0 +1,8 @@
+[{"id": "0", "Name": "Halle 0"}, 
+ {"id": "1", "Name": "Cuong Pham", "Firma": "CP", "Email": "pham@gmail.com", "Ort": "Krefeld"}, 
+ {"id": "2", "Name": "Fadma Akhim", "Firma": "F", "Email": "fadma@gmail.com", "Ort": "Duisburg"}, 
+ {"id": "3", "Name": "Phuc Huynh", "Firma": "PH", "Email": "huynh@gmail.com", "Ort": "Krefeld"},
+ {"id": "4", "Name": "Hung Pham", "Firma": "H", "Email": "hung@gmail.com", "Ort": "Bochum"},
+ {"id": "5", "Name": "Huynh Phuc", "Firma": "HP", "Email": "phuc@gmail.com", "Ort": "Dortmund"},
+ {"id": "6", "Name": "Hung Cuong", "Firma": "HC", "Email": "cuong@gmail.com", "Ort": "Berlin"}
+]
